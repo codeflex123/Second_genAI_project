@@ -219,11 +219,26 @@ class INDmoneyBot:
 
 
 
+            # --- 3. Identify Intended Fund for Strict Filtering ---
+            target_fund = None
+            if "icici" in query_l: target_fund = "ICICI Prudential Large Cap Fund"
+            elif "bank of india" in query_l: target_fund = "Bank of India Flexi Cap Fund"
+            elif "kotak" in query_l: target_fund = "Kotak Large Cap Fund"
+            elif "mahindra" in query_l or "manulife" in query_l: target_fund = "Mahindra Manulife Mid Cap Fund"
+            elif "motilal" in query_l or "oswal" in query_l: target_fund = "Motilal Oswal Large and Midcap Fund"
+            elif "hdfc" in query_l:
+                if "flexi" in query_l: target_fund = "HDFC Flexi Cap Fund"
+                elif "small" in query_l: target_fund = "HDFC Small Cap Fund"
+
             # Retrieve context from Vector DB (Local, no API cost)
-            results = self.collection.query(
-                query_texts=[query],
-                n_results=1
-            )
+            query_kwargs = {
+                "query_texts": [query],
+                "n_results": 1
+            }
+            if target_fund:
+                query_kwargs["where"] = {"fund_name": target_fund}
+
+            results = self.collection.query(**query_kwargs)
             
             context = "No specific data found."
             url = "https://www.indmoney.com"
