@@ -1,0 +1,16 @@
+# Environments
+.env
+phase3/.env
+
+# Databases
+chroma_db/
+phase2/chroma_db/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
