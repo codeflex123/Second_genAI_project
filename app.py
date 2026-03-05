@@ -2,7 +2,7 @@ import streamlit as st
 import os
 import json
 import sys
-# Version: 1.0.1 (Force Refresh)
+# Version: 1.0.2 (Force Refresh + Metadata Fix)
 from phase3.bot import INDmoneyBot
 
 # --- PAGE CONFIG ---
