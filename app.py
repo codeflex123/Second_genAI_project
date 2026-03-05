@@ -209,9 +209,20 @@ st.markdown(f"""
 
 # --- SESSION STATE (Chat History) ---
 if "messages" not in st.session_state:
+    supported_funds_md = """I can provide factual details for these 7 funds:
+- ICICI Prudential Large Cap Fund
+- HDFC Flexi Cap Fund
+- Kotak Large Cap Fund
+- Bank of India Flexi Cap Fund
+- HDFC Small Cap Fund
+- Mahindra Manulife Mid Cap Fund
+- Motilal Oswal Large and Midcap Fund
+
+**How can I help you today?**"""
+    
     st.session_state.messages = [{
         "role": "assistant",
-        "content": "Hello! I am your factual Mutual Fund assistant. I can fetch live NAVs, expense ratios, and help with common fund questions. \n\nHow can I help you today?"
+        "content": f"Hello! I am your factual Mutual Fund assistant. {supported_funds_md}"
     }]
 
 # --- DISPLAY CHAT ---

@@ -22,22 +22,41 @@ class INDmoneyBot:
         path = os.path.join(os.getcwd(), "phase2", "chroma_db")
         self.client = chromadb.PersistentClient(path=path)
         self.collection = self.client.get_or_create_collection("fund_data")
+        
+        # Exact supported funds for strict matching
+        self.supported_funds = [
+            "ICICI Prudential Large Cap Fund",
+            "HDFC Flexi Cap Fund",
+            "Kotak Large Cap Fund",
+            "Bank of India Flexi Cap Fund",
+            "HDFC Small Cap Fund",
+            "Mahindra Manulife Mid Cap Fund",
+            "Motilal Oswal Large and Midcap Fund"
+        ]
+        # Keywords for matching
         self.known_funds = ["icici", "prudential", "hdfc", "kotak", "bank of india", "mahindra", "manulife", "motilal", "oswal"]
         
     def is_relevant(self, query):
         """
-        Check if the query is about mutual funds or our specific funds,
-        and filter out advice-seeking or subjective questions.
+        Check if the query is about our specific supported funds.
+        If it mentions a fund NOT in our list, it is not relevant.
         """
         query_l = query.lower()
         
+        # 1. Identify if ANY fund is mentioned
+        mentioned_known = [f for f in self.known_funds if f in query_l]
+        
+        # 2. Block explicit unsupported funds (e.g. Parag Parikh)
+        # If they mention "fund" but none of our keywords, it's irrelevant
+        unsupported_triggers = ["parag", "parikh", "sbi", "axis", "mirae", "quantum", "nippon", "tata", "uti", "canara", "robeco"]
+        if any(u in query_l for u in unsupported_triggers):
+            return False
+
         # 1. Block explicit advice-seeking or subjective triggers
         advice_keywords = ["best", "should", "advice", "recommend", "suggest", "me", "my", "better", "top", "good", "noob", "student", "grandfather", "elder", "parent"]
-        # If any advice keyword is present AND no specific fund name is mentioned, it's likely out of scope
         has_advice_keyword = any(k in query_l for k in advice_keywords)
-        has_fund_name = any(f in query_l for f in self.known_funds)
+        has_fund_name = len(mentioned_known) > 0
         
-        # If they ask "best fund" or "should I invest", it's advice.
         if has_advice_keyword and not has_fund_name:
              return False
         
@@ -49,9 +68,11 @@ class INDmoneyBot:
             "absolute", "benchmark", "lock-in", "minimum", "buy", "how"
         ]
 
-        
         if has_fund_name:
+            # Stricter check: Even if a keyword matches, if they are asking about 
+            # something like "Parag Parikh" (which is now caught above), we return False.
             return True
+            
         if any(k in query_l for k in fund_keywords):
             return True
             
@@ -192,7 +213,7 @@ class INDmoneyBot:
 
 
 
-            # 3. Retrieve context from Vector DB (Local, no API cost)
+            # Retrieve context from Vector DB (Local, no API cost)
             results = self.collection.query(
                 query_texts=[query],
                 n_results=1
@@ -207,22 +228,37 @@ class INDmoneyBot:
                 metadata = results['metadatas'][0][0]
                 url = metadata.get('source_url', url)
 
+            # 4. Strict Fund Match Validation (Prevent wrong fund retrieval)
+            retrieved_name = metadata.get('fund_name', '').lower()
+            # If the query mentions a fund name that is NOT the retrieved one, block it.
+            # Example: Query is "Parag Parikh", retriever gets "Kotak". 
+            if retrieved_name:
+                # If query mentions a fund name but NOT the one we retrieved
+                # we should be careful. 
+                # catch cases like "Parag Parikh" getting "Kotak"
+                if any(u in query_l for u in ["parag", "parikh", "sbi", "axis", "mirae", "nippon", "tata"]):
+                     return f"I am a factual mutual fund assistant and only have data for 7 specific funds. I don't have data for \"{query}\"."
+
             # 3. Construct unified prompt for Intent + Synthesis
             prompt = f"""
             SYSTEM ROLE:
             You are a strict factual mutual fund assistant for INDmoney.
             
+            SUPPORTED FUNDS:
+            - ICICI Prudential Large Cap Fund
+            - HDFC Flexi Cap Fund
+            - Kotak Large Cap Fund
+            - Bank of India Flexi Cap Fund
+            - HDFC Small Cap Fund
+            - Mahindra Manulife Mid Cap Fund
+            - Motilal Oswal Large and Midcap Fund
+
             GUARDRAILS:
-            1. If the query is unrelated to mutual funds, INDmoney, or financial data provided explicitly in the context, refuse to answer. Say: "I am a factual mutual fund assistant and can only help with data provided in my knowledge base."
-            2. Do NOT provide investment advice or recommendations. 
-               - If asked "Which fund is best?", "Should I invest?", "Best for students/parents", etc., refuse. 
-               - Say: "I cannot provide investment advice or fund recommendations. I can only share factual data like NAV, AUM, and Expense Ratios for specific funds."
-            3. Answer precisely. If a specific data point (like AUM, Turnover, Absolute Gain, Benchmark, Lock-in, Lumpsum/SIP, or FAQ) is asked, provide that specific value/section at the very beginning of your response.
-            4. If the query asks "How to invest", "How to buy", or mentions "Minimum investment", provide the specific Min Lumpsum and SIP details for the fund.
-            5. If the query is subjective (e.g., "Am I a good investor?"), refuse.
-            6. CRITICAL: If the user does NOT specify a fund name in the query (e.g., just "NAV", "Expense Ratio"), do NOT guess or provide data for a default fund. Instead, politely ask the user to specify which mutual fund they are asking about.
-            7. Use ONLY the provided context. If the query asks for a comparison or ranking not explicitly in the context, refuse.
-            8. Do NOT repeat your answer or provide duplicate information. Be concise.
+            1. If the query asks about ANY fund NOT in the supported list above (e.g., Parag Parikh, SBI, Axis, etc.), you MUST politely refuse. Say: "I only have detailed factual data for the 7 specific funds listed in my database. I cannot provide information for other funds."
+            2. If the query is unrelated to mutual funds, refuse. Say: "I am a factual mutual fund assistant and can only help with data provided in my knowledge base."
+            3. Do NOT provide investment advice or recommendations. 
+            4. If the user does NOT specify a fund name in the query, politely ask them to specify which mutual fund they are asking about.
+            5. CRITICAL: Do NOT hallucinate data or use your internal knowledge about funds. Use ONLY the provided context. If the context does not match the fund asked for, refuse to answer.
             
             CONTEXT:
             {context}
