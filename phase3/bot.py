@@ -180,10 +180,16 @@ class INDmoneyBot:
 
     def handle_query(self, query):
         """
-        Handles the entire query lifecycle in ONE Gemini API call.
+        Handles the entire query lifecycle with strict fund filtering.
         """
         try:
-            # 1. First Pass Health/Relevance Check
+            query_l = query.lower().strip()
+            # 1. IMMEDIATE BLOCK for known unsupported funds (STRICT GUARDRAIL v1.1)
+            unsupported_triggers = ["parag", "parikh", "sbi", "axis", "mirae", "quantum", "nippon", "tata", "uti", "canara", "robeco"]
+            if any(u in query_l for u in unsupported_triggers):
+                return "I am a factual mutual fund assistant and only have detailed data for the 7 funds listed in my database. I do not have information for Parag Parikh or other external funds."
+
+            # 2. First Pass Health/Relevance Check
             if not self.is_relevant(query):
                 return "I am a factual mutual fund assistant and can only help with data provided in my knowledge base. For investment advice or general questions, please consult a financial advisor."
 

@@ -203,7 +203,7 @@ st.markdown(f"""
         </div>
         <div class="status-area">
             <div class="status-dot"></div>
-            <span>Live Data | Last Updated: {last_update}</span>
+            <span>v1.1 | Live Data | Last Updated: {last_update}</span>
         </div>
     </div>
 """, unsafe_allow_html=True)
