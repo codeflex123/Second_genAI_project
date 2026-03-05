@@ -21,7 +21,7 @@ class INDmoneyBot:
         # Update path to look into Phase 2's isolated storage
         path = os.path.join(os.getcwd(), "phase2", "chroma_db")
         self.client = chromadb.PersistentClient(path=path)
-        self.collection = self.client.get_collection("fund_data")
+        self.collection = self.client.get_or_create_collection("fund_data")
         self.known_funds = ["icici", "prudential", "hdfc", "kotak", "bank of india", "mahindra", "manulife", "motilal", "oswal"]
         
     def is_relevant(self, query):
