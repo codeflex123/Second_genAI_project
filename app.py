@@ -27,8 +27,18 @@ st.markdown("""
 
     .stApp {
         background: radial-gradient(circle at top left, #1a1c2c, #0d0e14);
-        color: var(--text-main);
+        color: var(--text-main) !important;
         font-family: 'Inter', sans-serif;
+    }
+
+    /* Force white text for all markdown/standard text */
+    .stApp p, .stApp span, .stApp label, .stApp h1, .stApp h2, .stApp h3 {
+        color: #ffffff !important;
+    }
+
+    /* Fix Streamlit Chat Message text color */
+    [data-testid="stChatMessage"] div {
+        color: #ffffff !important;
     }
 
     [data-testid="stHeader"] {
@@ -73,7 +83,7 @@ st.markdown("""
         font-weight: 800;
         font-family: 'Outfit', sans-serif;
         font-size: 18px;
-        color: white;
+        color: white !important;
     }
 
     h1 {
@@ -81,12 +91,12 @@ st.markdown("""
         font-size: 24px;
         font-weight: 600;
         margin: 0;
-        color: white;
+        color: white !important;
     }
 
     .status-area {
         font-size: 12px;
-        color: #4ade80;
+        color: #4ade80 !important;
         display: flex;
         align-items: center;
         gap: 8px;
@@ -105,15 +115,30 @@ st.markdown("""
         display: block;
         margin-top: 10px;
         font-size: 12px;
-        color: var(--primary);
+        color: var(--primary) !important;
         text-decoration: none;
         font-weight: 600;
+    }
+
+    /* Fix Suggested Buttons (Streamlit Native) */
+    button[kind="secondary"] {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid var(--border-glass) !important;
+        color: #ffffff !important;
+        border-radius: 12px !important;
+        font-size: 12px !important;
+        padding: 0.5rem 1rem !important;
+        height: auto !important;
+    }
+    button[kind="secondary"]:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-color: var(--primary) !important;
     }
 
     /* Typing Indicator (CSS only) */
     .typing {
         font-size: 12px;
-        color: #b0b0b0;
+        color: #b0b0b0 !important;
         margin-bottom: 10px;
         font-style: italic;
     }
@@ -123,6 +148,11 @@ st.markdown("""
         border-radius: 14px !important;
         background: rgba(255, 255, 255, 0.05) !important;
         border: 1px solid var(--border-glass) !important;
+    }
+
+    /* Force input text color */
+    .stChatInputContainer textarea {
+        color: #ffffff !important;
     }
     
     /* Hide Streamlit elements */
