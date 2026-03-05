@@ -1,1 +1,8 @@
 streamlit
+chromadb
+google-generativeai
+python-dotenv
+pydantic
+fastapi
+uvicorn
+playwright
