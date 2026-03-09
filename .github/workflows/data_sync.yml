@@ -29,13 +29,15 @@ jobs:
           playwright install chromium --with-deps
 
       - name: Run Sync Job
-        run: python3 phase5/scheduler.py --once
+        run: |
+          python3 phase5/scheduler.py --once
+          python3 phase5/update_preview.py
 
       - name: Commit and Push Changes
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          git add phase1/fund_data.json
+          git add phase1/fund_data.json data_preview.md
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
