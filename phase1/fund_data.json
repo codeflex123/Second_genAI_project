@@ -74,31 +74,6 @@
             }
         ]
     },
-    "https://www.indmoney.com/mutual-funds/bank-of-india-flexi-cap-fund-direct-growth-1005920": {
-        "fund_name": "Bank of India Flexi Cap Fund",
-        "nav": "\u20b940.78",
-        "nav_change": "\u25bc-1.1% 1D",
-        "nav_date": "19 Jun 2026",
-        "return_since_inception": "26.52%/per year",
-        "absolute_gain": "+279%",
-        "expense_ratio": "0.53%",
-        "benchmark": "BSE 500 India TR INR",
-        "aum": "\u20b92167 Cr",
-        "inception_date": "29 June, 2020",
-        "min_lumpsum_sip": "\u20b95,000/\u20b91,000",
-        "exit_load": "1.0% if redeemed in 0-3 Months",
-        "lock_in": "No Lock-in",
-        "turnover": "71.62%",
-        "risk": "Very High Risk",
-        "fund_managers": "Alok Singh",
-        "about": "Bank of India Flexi Cap Fund is an equity fund started on 29 June, 2020.",
-        "faqs": [
-            {
-                "q": "What is the return?",
-                "a": "20.43% in 1 year, 24.18% in 3 years."
-            }
-        ]
-    },
     "https://www.indmoney.com/mutual-funds/hdfc-small-cap-fund-direct-growth-option-3580": {
         "fund_name": "HDFC Small Cap Fund",
         "nav": "\u20b9158.56",
@@ -124,11 +99,36 @@
             }
         ]
     },
+    "https://www.indmoney.com/mutual-funds/bank-of-india-flexi-cap-fund-direct-growth-1005920": {
+        "fund_name": "Bank of India Flexi Cap Fund",
+        "nav": "\u20b937.90",
+        "nav_change": "\u25bc-1.1% 1D",
+        "nav_date": "22 Jun 2026 (Baseline)",
+        "return_since_inception": "26.52%/per year",
+        "absolute_gain": "+279%",
+        "expense_ratio": "0.53%",
+        "benchmark": "BSE 500 India TR INR",
+        "aum": "\u20b92167 Cr",
+        "inception_date": "29 June, 2020",
+        "min_lumpsum_sip": "\u20b95,000/\u20b91,000",
+        "exit_load": "1.0% if redeemed in 0-3 Months",
+        "lock_in": "No Lock-in",
+        "turnover": "71.62%",
+        "risk": "Very High Risk",
+        "fund_managers": "Alok Singh",
+        "about": "Bank of India Flexi Cap Fund is an equity fund started on 29 June, 2020.",
+        "faqs": [
+            {
+                "q": "What is the return?",
+                "a": "20.43% in 1 year, 24.18% in 3 years."
+            }
+        ]
+    },
     "https://www.indmoney.com/mutual-funds/mahindra-manulife-mid-cap-fund-direct-growth-3109": {
         "fund_name": "Mahindra Manulife Mid Cap Fund",
-        "nav": "\u20b942.03",
+        "nav": "\u20b938.90",
         "nav_change": "\u25bc-1% 1D",
-        "nav_date": "19 Jun 2026",
+        "nav_date": "22 Jun 2026 (Baseline)",
         "return_since_inception": "18.27%/per year",
         "absolute_gain": "+289.02%",
         "expense_ratio": "0.46%",
@@ -153,7 +153,7 @@
         "fund_name": "Motilal Oswal Large and Midcap Fund",
         "nav": "\u20b935.40",
         "nav_change": "\u25bc-0.5% 1D",
-        "nav_date": "21 Jun 2026 (Baseline)",
+        "nav_date": "22 Jun 2026 (Baseline)",
         "return_since_inception": "21.97%/per year",
         "absolute_gain": "+254.01%",
         "expense_ratio": "0.71%",
