@@ -126,9 +126,9 @@
     },
     "https://www.indmoney.com/mutual-funds/mahindra-manulife-mid-cap-fund-direct-growth-3109": {
         "fund_name": "Mahindra Manulife Mid Cap Fund",
-        "nav": "\u20b941.60",
+        "nav": "\u20b938.90",
         "nav_change": "\u25bc-1% 1D",
-        "nav_date": "25 Jun 2026",
+        "nav_date": "28 Jun 2026 (Baseline)",
         "return_since_inception": "18.27%/per year",
         "absolute_gain": "+289.02%",
         "expense_ratio": "0.46%",
@@ -151,9 +151,9 @@
     },
     "https://www.indmoney.com/mutual-funds/motilal-oswal-large-and-midcap-fund-direct-growth-1005201": {
         "fund_name": "Motilal Oswal Large and Midcap Fund",
-        "nav": "\u20b939.12",
+        "nav": "\u20b935.40",
         "nav_change": "\u25bc-0.5% 1D",
-        "nav_date": "25 Jun 2026",
+        "nav_date": "28 Jun 2026 (Baseline)",
         "return_since_inception": "21.97%/per year",
         "absolute_gain": "+254.01%",
         "expense_ratio": "0.71%",
