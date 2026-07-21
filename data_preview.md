@@ -1,7 +1,7 @@
 # Mutual Fund Data Preview
 
 This file provides a factual summary of the data extracted from INDmoney for the 7 supported mutual funds. 
-**Last Sync: 20 Jul 2026 (Baseline)**
+**Last Sync: 21 Jul 2026 (Baseline)**
 
 | Fund Name | NAV | Expense Ratio | AUM | Risk Category | Source Link |
 |---|---|---|---|---|---|
