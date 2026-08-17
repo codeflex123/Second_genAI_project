@@ -124,6 +124,31 @@
             }
         ]
     },
+    "https://www.indmoney.com/mutual-funds/mahindra-manulife-mid-cap-fund-direct-growth-3109": {
+        "fund_name": "Mahindra Manulife Mid Cap Fund",
+        "nav": "\u20b942.81",
+        "nav_change": "\u25bc-1% 1D",
+        "nav_date": "14 Aug 2026",
+        "return_since_inception": "18.27%/per year",
+        "absolute_gain": "+289.02%",
+        "expense_ratio": "0.46%",
+        "benchmark": "Nifty Midcap 150 TR INR",
+        "aum": "\u20b94267 Cr",
+        "inception_date": "23 January, 2018",
+        "min_lumpsum_sip": "\u20b91,000/\u20b9500",
+        "exit_load": "1.0% if redeemed in 0-3 Months",
+        "lock_in": "No Lock-in",
+        "turnover": "62%",
+        "risk": "Very High Risk",
+        "fund_managers": "Krishna Sanghavi, Kirti Dalvi, Neelesh Dhamnaskar",
+        "about": "Mahindra Manulife Mid Cap Fund started on 23 January, 2018.",
+        "faqs": [
+            {
+                "q": "What is the return?",
+                "a": "21.34% in 1 year, 27.58% in 3 years."
+            }
+        ]
+    },
     "https://www.indmoney.com/mutual-funds/motilal-oswal-large-and-midcap-fund-direct-growth-1005201": {
         "fund_name": "Motilal Oswal Large and Midcap Fund",
         "nav": "\u20b940.73",
@@ -146,31 +171,6 @@
             {
                 "q": "What is the return?",
                 "a": "20.50% in 1 year, 25.83% in 3 years."
-            }
-        ]
-    },
-    "https://www.indmoney.com/mutual-funds/mahindra-manulife-mid-cap-fund-direct-growth-3109": {
-        "fund_name": "Mahindra Manulife Mid Cap Fund",
-        "nav": "\u20b938.90",
-        "nav_change": "\u25bc-1% 1D",
-        "nav_date": "16 Aug 2026 (Baseline)",
-        "return_since_inception": "18.27%/per year",
-        "absolute_gain": "+289.02%",
-        "expense_ratio": "0.46%",
-        "benchmark": "Nifty Midcap 150 TR INR",
-        "aum": "\u20b94267 Cr",
-        "inception_date": "23 January, 2018",
-        "min_lumpsum_sip": "\u20b91,000/\u20b9500",
-        "exit_load": "1.0% if redeemed in 0-3 Months",
-        "lock_in": "No Lock-in",
-        "turnover": "62%",
-        "risk": "Very High Risk",
-        "fund_managers": "Krishna Sanghavi, Kirti Dalvi, Neelesh Dhamnaskar",
-        "about": "Mahindra Manulife Mid Cap Fund started on 23 January, 2018.",
-        "faqs": [
-            {
-                "q": "What is the return?",
-                "a": "21.34% in 1 year, 27.58% in 3 years."
             }
         ]
     }
