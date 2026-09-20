@@ -1,29 +1,4 @@
 {
-    "https://www.indmoney.com/mutual-funds/icici-prudential-large-cap-fund-direct-plan-growth-2995": {
-        "fund_name": "ICICI Prudential Large Cap Fund",
-        "nav": "\u20b9116.39",
-        "nav_change": "\u25bc-1.2% 1D",
-        "nav_date": "18 Sep 2026",
-        "return_since_inception": "15.51%/per year",
-        "absolute_gain": "+566.31%",
-        "expense_ratio": "0.85%",
-        "benchmark": "Nifty 100 TR INR",
-        "aum": "\u20b976646 Cr",
-        "inception_date": "1 January, 2013",
-        "min_lumpsum_sip": "\u20b9100/\u20b9100",
-        "exit_load": "1.0% if redeemed in 0-1 Years",
-        "lock_in": "No Lock-in",
-        "turnover": "15.35%",
-        "risk": "Very High Risk",
-        "fund_managers": "Sankaran Naren, Vaibhav Dusad, Sharmila D\u2019mello",
-        "about": "ICICI Prudential Large Cap Fund is an equity fund started on 1 January, 2013. The fund could potentially beat inflation in the long-run.",
-        "faqs": [
-            {
-                "q": "What is the return on the fund?",
-                "a": "15.05% in 1 year, 19.04% in 3 years, 16.58% in 5 years."
-            }
-        ]
-    },
     "https://www.indmoney.com/mutual-funds/hdfc-flexi-cap-fund-direct-plan-growth-option-3184": {
         "fund_name": "HDFC Flexi Cap Fund",
         "nav": "\u20b92242.76",
@@ -71,6 +46,31 @@
             {
                 "q": "What is the return?",
                 "a": "16.52% in 1 year, 17.38% in 3 years."
+            }
+        ]
+    },
+    "https://www.indmoney.com/mutual-funds/bank-of-india-flexi-cap-fund-direct-growth-1005920": {
+        "fund_name": "Bank of India Flexi Cap Fund",
+        "nav": "\u20b942.34",
+        "nav_change": "\u25bc-1.1% 1D",
+        "nav_date": "18 Sep 2026",
+        "return_since_inception": "26.52%/per year",
+        "absolute_gain": "+279%",
+        "expense_ratio": "0.53%",
+        "benchmark": "BSE 500 India TR INR",
+        "aum": "\u20b92167 Cr",
+        "inception_date": "29 June, 2020",
+        "min_lumpsum_sip": "\u20b95,000/\u20b91,000",
+        "exit_load": "1.0% if redeemed in 0-3 Months",
+        "lock_in": "No Lock-in",
+        "turnover": "71.62%",
+        "risk": "Very High Risk",
+        "fund_managers": "Alok Singh",
+        "about": "Bank of India Flexi Cap Fund is an equity fund started on 29 June, 2020.",
+        "faqs": [
+            {
+                "q": "What is the return?",
+                "a": "20.43% in 1 year, 24.18% in 3 years."
             }
         ]
     },
@@ -149,28 +149,28 @@
             }
         ]
     },
-    "https://www.indmoney.com/mutual-funds/bank-of-india-flexi-cap-fund-direct-growth-1005920": {
-        "fund_name": "Bank of India Flexi Cap Fund",
-        "nav": "\u20b937.90",
-        "nav_change": "\u25bc-1.1% 1D",
-        "nav_date": "19 Sep 2026 (Baseline)",
-        "return_since_inception": "26.52%/per year",
-        "absolute_gain": "+279%",
-        "expense_ratio": "0.53%",
-        "benchmark": "BSE 500 India TR INR",
-        "aum": "\u20b92167 Cr",
-        "inception_date": "29 June, 2020",
-        "min_lumpsum_sip": "\u20b95,000/\u20b91,000",
-        "exit_load": "1.0% if redeemed in 0-3 Months",
+    "https://www.indmoney.com/mutual-funds/icici-prudential-large-cap-fund-direct-plan-growth-2995": {
+        "fund_name": "ICICI Prudential Large Cap Fund",
+        "nav": "\u20b9123.60",
+        "nav_change": "\u25bc-1.2% 1D",
+        "nav_date": "20 Sep 2026 (Baseline)",
+        "return_since_inception": "15.51%/per year",
+        "absolute_gain": "+566.31%",
+        "expense_ratio": "0.85%",
+        "benchmark": "Nifty 100 TR INR",
+        "aum": "\u20b976646 Cr",
+        "inception_date": "1 January, 2013",
+        "min_lumpsum_sip": "\u20b9100/\u20b9100",
+        "exit_load": "1.0% if redeemed in 0-1 Years",
         "lock_in": "No Lock-in",
-        "turnover": "71.62%",
+        "turnover": "15.35%",
         "risk": "Very High Risk",
-        "fund_managers": "Alok Singh",
-        "about": "Bank of India Flexi Cap Fund is an equity fund started on 29 June, 2020.",
+        "fund_managers": "Sankaran Naren, Vaibhav Dusad, Sharmila D\u2019mello",
+        "about": "ICICI Prudential Large Cap Fund is an equity fund started on 1 January, 2013. The fund could potentially beat inflation in the long-run.",
         "faqs": [
             {
-                "q": "What is the return?",
-                "a": "20.43% in 1 year, 24.18% in 3 years."
+                "q": "What is the return on the fund?",
+                "a": "15.05% in 1 year, 19.04% in 3 years, 16.58% in 5 years."
             }
         ]
     }
