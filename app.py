@@ -166,14 +166,14 @@ st.markdown("""
 @st.cache_resource
 def get_bot():
     bot_instance = INDmoneyBot()
-    # Auto-initialize if collection is empty (crucial for Streamlit Cloud)
-    if bot_instance.collection.count() == 0:
-        with st.spinner("Initializing Mutual Fund database..."):
-            from phase2.ingest import ingest_to_vector_db
-            json_path = os.path.join(os.getcwd(), "phase1", "fund_data.json")
-            ingest_to_vector_db(json_path)
-            # Re-initialize collection reference after ingestion
-            bot_instance.collection = bot_instance.client.get_collection("fund_data")
+    # Ensure ChromaDB always reflects the latest fund_data.json
+    try:
+        from phase2.ingest import ingest_to_vector_db
+        json_path = os.path.join(os.getcwd(), "phase1", "fund_data.json")
+        ingest_to_vector_db(json_path)
+        bot_instance.collection = bot_instance.client.get_collection("fund_data")
+    except Exception as e:
+        print(f"Ingestion sync note: {e}")
     return bot_instance
 
 bot = get_bot()
