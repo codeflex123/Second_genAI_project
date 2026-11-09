@@ -7,7 +7,7 @@ This file provides a factual summary of the data extracted from INDmoney for the
 |---|---|---|---|---|---|
 | ICICI Prudential Large Cap Fund | ₹122.59 | 1.01% | ₹76352 Cr | Very High Risk | [Link](https://www.indmoney.com/mutual-funds/icici-prudential-large-cap-fund-direct-plan-growth-2995) |
 | HDFC Flexi Cap Fund | ₹2335.94 | 0.77% | ₹108547 Cr | Very High Risk | [Link](https://www.indmoney.com/mutual-funds/hdfc-flexi-cap-fund-direct-plan-growth-option-3184) |
-| Kotak Large Cap Fund | ₹672.26 | 0.76% | ₹10514 Cr | Very High Risk | [Link](https://www.indmoney.com/mutual-funds/kotak-large-cap-direct-growth-3941) |
+| Kotak Large Cap Fund | ₹672.25 | 0.76% | ₹10514 Cr | Very High Risk | [Link](https://www.indmoney.com/mutual-funds/kotak-large-cap-direct-growth-3941) |
 | Bank of India Flexi Cap Fund | ₹42.14 | 0.85% | ₹3098 Cr | Very High Risk | [Link](https://www.indmoney.com/mutual-funds/bank-of-india-flexi-cap-fund-direct-growth-1005920) |
 | HDFC Small Cap Fund | ₹152.17 | 0.79% | ₹40801 Cr | Very High Risk | [Link](https://www.indmoney.com/mutual-funds/hdfc-small-cap-fund-direct-growth-option-3580) |
 | Mahindra Manulife Mid Cap Fund | ₹39.80 | 0.75% | ₹5058 Cr | Very High Risk | [Link](https://www.indmoney.com/mutual-funds/mahindra-manulife-mid-cap-fund-direct-growth-3109) |
