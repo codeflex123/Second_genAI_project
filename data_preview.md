@@ -5,7 +5,7 @@ This file provides a factual summary of the data extracted from INDmoney for the
 
 | Fund Name | NAV | Expense Ratio | AUM | Risk Category | Source Link |
 |---|---|---|---|---|---|
-| ICICI Prudential Large Cap Fund | ₹123.25 | 1.01% | ₹76352 Cr | Very High Risk | [Link](https://www.indmoney.com/mutual-funds/icici-prudential-large-cap-fund-direct-plan-growth-2995) |
+| ICICI Prudential Large Cap Fund | ₹123.25 | 1.01% | ₹76895 Cr | Very High Risk | [Link](https://www.indmoney.com/mutual-funds/icici-prudential-large-cap-fund-direct-plan-growth-2995) |
 | HDFC Flexi Cap Fund | ₹2363.76 | 0.77% | ₹108547 Cr | Very High Risk | [Link](https://www.indmoney.com/mutual-funds/hdfc-flexi-cap-fund-direct-plan-growth-option-3184) |
 | Kotak Large Cap Fund | ₹679.91 | 0.76% | ₹10514 Cr | Very High Risk | [Link](https://www.indmoney.com/mutual-funds/kotak-large-cap-direct-growth-3941) |
 | Bank of India Flexi Cap Fund | ₹43.31 | 0.85% | ₹3098 Cr | Very High Risk | [Link](https://www.indmoney.com/mutual-funds/bank-of-india-flexi-cap-fund-direct-growth-1005920) |
